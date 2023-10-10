@@ -1,1 +1,25 @@
+def reversewords(s):
+   
+    word = s.split()
+ 
+    rev = ''
+ 
+    for i in range(len(word)-1, -1, -1):
+        rev += word[i] + ' '
+ 
+    print(rev)
+ 
+string = input("Enter the string : ")
+reversewords(string)
 
+
+'''
+string = input("Enter the string : ")
+
+words = string.split()
+
+words = list(reversed(words))
+
+print(" ".join(words))
+
+'''
