@@ -1,1 +1,18 @@
+string = input("Enter the String : ")
+substring = input("Enter the Substring : ")
 
+if substring in string:
+    print(substring," is present.")
+
+else:
+    print(substring," is not present.")
+'''
+string = input("Enter the String : ")
+substring = input("Enter the Substring : ")
+
+if(string.find(substring) == -1):
+    print(substring," is not present.")
+
+else:
+    print(substring," is present.")
+'''
