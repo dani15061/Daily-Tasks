@@ -1,1 +1,11 @@
+string = "My\tName\tis\nDharani"
 
+print("The string without escape charaters : ")
+
+print(string)
+
+#repr() function is used to print the string in readable form
+
+print("The string with escape charaters : ")
+
+print(repr(string))
