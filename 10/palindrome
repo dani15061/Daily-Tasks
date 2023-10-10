@@ -1,1 +1,44 @@
+def palindrome(a):
+    start = 0
+    b = len(a)
+    mid = (len(a)-1)//2
+    last = (len(a)-1)
+    flag = 0
+    print(b)
+    
 
+    while(start <= mid):
+
+        if(a[start] == a[last]):
+
+            start += 1
+            last -= 1
+
+        else:
+            flag = 1
+            break
+
+    if flag == 0:
+        print(a," is palindrome")
+
+    else:
+        print(a," is not palindrome")
+
+
+
+
+string = input("Enter the string : ")
+palindrome(string)
+
+'''
+string = input("Enter the string : ")
+
+if(string == string[::-1]):
+
+    print(string," is palindrome")
+
+else:
+
+    print(string, " is not palindrome")
+    
+'''
