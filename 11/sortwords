@@ -1,0 +1,29 @@
+#Python program to sort words in Alphabetical Order
+'''
+s = input("Enter a string: ")
+ 
+w = s.split()
+ 
+w.sort()
+ 
+for i in w:
+   print(i)
+
+'''
+s = input("Enter the string to be sorted :")
+
+w = s.split()
+
+for k in range(len(w)):
+
+    w[k] = w[k].lower()
+
+for n in range(len(w)-1, 0, -1):
+
+    for i in range(n):
+
+        if w[i] > w[i+1]:
+
+            w[i] , w[i+1] = w[i+1] , w[i]
+
+print(w)            
