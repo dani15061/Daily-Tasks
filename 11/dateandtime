@@ -1,0 +1,17 @@
+#Python program to print the below details Date: Day: Hour: Minute: Second: Millisecond:
+
+import datetime
+
+x = datetime.datetime.now()
+
+print("Date : " , x.strftime ('%d-%b-%Y'))
+
+print("Day : " , x.strftime("%A"))
+
+print("Hour : " , x.hour)
+
+print("Minute : " , x.minute)
+
+print("Seconds : " , x.second)
+
+print("Milliseconds : " , (x.second)*1000)
