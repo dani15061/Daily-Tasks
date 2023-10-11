@@ -1,0 +1,9 @@
+#Python program to find the ASCII value of the given string
+
+s = input("Enter the string : ")
+
+for i in s:
+
+    k = ord(i)
+
+    print("ASCII Value of '" , i ,"' is" ,k)
