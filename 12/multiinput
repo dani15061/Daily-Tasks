@@ -1,0 +1,13 @@
+'''
+a,b,c,d= input("Enter 4 numbers(No delimiters should be used) : ").split(" ")
+print("a = ",a)
+print("b = ",b)
+print("c = ",c)
+print("d = ",d)
+'''
+
+a, b, c, d = input("Enter 4 numbers(Use delimiter ';'): ").split(";")
+print("a = ", a)
+print("b = ", b)
+print("c = ", c)
+print("d = ", d)
