@@ -1,0 +1,10 @@
+# Python program to Check for URL in a String
+#s= input("Enter the string :")
+s = "My Profile: https://auth.geeksforgeeks.org/user/Chinmoy%20Lenka/articles in the portal of https://www.geeksforgeeks.org/"
+t = s.split()
+new = []
+for i in t:
+	if i.startswith("https:") or i.startswith("http:"):
+		new.append(i)
+	
+print("URLs in the string are ",new)
