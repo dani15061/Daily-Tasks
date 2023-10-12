@@ -1,0 +1,19 @@
+#Python program for removing i-th character from a string
+s = input("Enter the string : ")
+i = int(input("Enter the index to be removed : "))
+new_s =''
+for j in range(len(s)):
+    if j != i:
+        new_s = new_s+s[j]
+print("The string '",s,"after removing '",i,"is ",new_s)
+'''
+def remove(s1, i): 
+  
+    for j in range(len(s1)): 
+        if j == i: 
+            s1 = s1.replace(s1[i], "", 1) 
+    return s1 
+s = input("Enter the string : ")
+i = int(input("Enter the index to be removed : "))
+print("The string '",s,"after removing '",i,"is ",remove(s, i)) 
+'''
