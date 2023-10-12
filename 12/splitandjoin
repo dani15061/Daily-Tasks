@@ -1,0 +1,14 @@
+#Python program to split and join a string
+def split_s(s1):
+    s2 = s1.split()
+    return s2
+
+def join_s(s2):
+    s3 = '-'.join(s2)
+    return s3
+
+s = input("Enter the string : ")
+a = split_s(s)
+b = join_s(a)
+print("The split string : ",a)
+print("The joined string using '_' : ",b)
