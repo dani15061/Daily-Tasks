@@ -1,0 +1,10 @@
+# Python program to find the frequency of minimum occurring character in a string
+s =  input('Enter the string : ')
+x = {}
+for i in s:
+    if i in x:
+        x[i] += 1
+    else:
+        x[i] = 1
+least = min(x, key = x.get)
+print(least , "is the least frequent character")
