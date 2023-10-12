@@ -1,0 +1,12 @@
+#Python program to find Words Frequency in String (2 ways) 
+s = input("Enter the string : ")
+x = s.split()
+new = {w: x.count(w) for w in set(x)}
+print("The words frequency : ", new)
+
+'''
+s = input("Enter the string : ")
+new = {key: s.count(key) for key in s.split()}
+print("The words frequency : " , new)
+
+'''
