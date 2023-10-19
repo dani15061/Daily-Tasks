@@ -1,0 +1,115 @@
+class Product:
+    def __init__(self,x,y):
+        self._x = x
+        self._y = y
+        
+    def display(self):
+        print(self._x, self._y)
+    
+    @property
+    def value(self):
+          return self._x
+
+    @value.setter
+    def value(self, val):
+         self._x = val
+    
+    @value.deleter
+    def value(self):
+          print('value deleted')
+    
+    @property
+    def y(self):
+         return self._y
+ 
+    @y.setter
+    def y(self, val):
+         self._y = val
+
+p = Product(12,24)
+del p.value
+'''
+class Person:
+         def __init__(self, name, age):
+              self.name = name
+              self.age = age
+         
+         def display(self): 
+               print(self.name,self.age)
+
+         @property
+         def age(self):
+             return self._age
+
+         @age.setter
+         def age(self, new_age):
+              if  20< new_age<80:
+                self._age = new_age
+              else:
+                 raise ValueError('Age must be between 20 and 80')
+
+p = Person('Peter', 30)
+print(p.age)
+p.age = 200
+print(p.age)
+
+p1 = Person('Dev',200)
+p.age = p.age +1
+p.age += 1
+print(p.age)
+
+class Employee:
+      def __init__(self, name, password, salary):
+          self._name = name
+          self._password = password
+          self._salary = salary
+
+      @property
+      def name(self):
+           return self._name
+
+      @property
+      def password(self):
+           raise AttributeError('password not readable')
+        
+      @password.setter
+      def password(self, new_password):
+           self._password =  new_password
+
+      @property
+      def salary(self):
+           return self._salary
+
+      @salary.setter
+      def salary(self, new_salary):
+           self._password =  new_salary
+
+
+e = Employee('Jill', 'feb31', 5000)
+print(e.name)
+#e.name = 'dd'
+#print(e.password)
+e.password = 'feb29'
+print(e.salary)
+e.salary = 6000
+
+class Rectangle():
+    def __init__(self,length,breadth):
+           self.length = length
+           self.breadth = breadth
+    
+    def area(self):
+          return self.length * self.breadth
+
+    def perimeter(self):
+          return 2*(self.length + self.breadth)
+
+    @property
+    def diagonal(self):
+          return (self.length*self.length + self.breadth * self.breadth)**0.5 
+
+r = Rectangle(2,5)
+print(r.diagonal)
+r.length = 10
+print(r.diagonal)
+'''
