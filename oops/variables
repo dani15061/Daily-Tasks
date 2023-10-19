@@ -1,0 +1,57 @@
+'''
+class Person:
+    species  = 'Homo sapiens'
+    count = 0
+
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        Person.count+=1
+
+    def display(self):
+         print(f'{self.name} is {self.age} years old')
+         
+p1 = Person('John',20)
+p2 = Person('Jack',34)
+
+p1.display()
+p2.display()
+
+print(Person.count)
+p3=Person('Jill', 40)
+p4=Person('Jane', 35)
+print(Person.count) 
+
+class BankAccount:
+    rate_of_interest = 5
+    min_balance = 100
+    min_balance_fees = 10
+    
+    def __init__(self,account_number, owner_name, balance):
+        self.account_number = account_number
+        self.owner_name = owner_name
+        self.balance = balance
+
+    def withdraw(self,amount):
+        self.balance -= amount
+
+    def deposit(self,amount):
+        self.balance += amount
+
+
+account1 = BankAccount('7348', 'Tom', 50)
+account2 = BankAccount('6378', 'Bob', 400) 
+
+
+'''
+
+class Account():
+       rate = 5
+       def some_method(self): 
+          print(self.rate, Account.rate, id(self.rate), id(Account.rate))
+          self.rate = 10
+          print(self.rate, Account.rate, id(self.rate), id(Account.rate))
+     
+a1 = Account()
+a2 = Account()
+a1.some_method() 
