@@ -9,7 +9,7 @@ for k in range(0 , n):
     l = int(input())
     a.append(l)
 print("The array is",a)
-x = 10
+x = int(input("Enter the element to be searched : "))
 N = len(a)   
 result = search(a, N, x) 
 if(result == -1): 

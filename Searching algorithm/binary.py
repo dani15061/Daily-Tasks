@@ -16,7 +16,7 @@ for k in range(0 , n):
     a.append(l)
 print("The array is",a)
   
-x = 10
+x = int(input("Enter the element to be searched : "))
  
    
 result = binarySearch(a, 0, len(a)-1, x)
