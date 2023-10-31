@@ -1,0 +1,25 @@
+def search(mat, n, x):
+    if(n == 0):
+        return -1
+    for i in range(n):
+        for j in range(n):
+            if(mat[i][j] == x):
+                print("Element found at (", i, ",", j, ")")
+                return 1
+    print(" Element not found")
+    return 0
+
+n1 = int(input("Enter the number of rows :"))
+n2 = int(input("Enter the number of columns :"))
+m = []
+for i in range(n1):
+    s = []
+    for j in range(n2):
+        s.append(int(input()))
+    m.append(s)
+for i in range(n1):
+    for j in range(n2):
+        print(m[i][j], end = " ")
+    print()
+x = int(input("Enter the number to to searched : ")) 
+search(m, n1, x)
