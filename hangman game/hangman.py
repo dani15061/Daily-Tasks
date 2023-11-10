@@ -1,9 +1,6 @@
 import random
-words = ['soup','mount','extend','brown','expert','tired','humidity','backpack','crust','dent','market','knock','smite','windy','coin','throw',
-    'silence','bluff','downfall','climb','lying','weaver','kickoff','match','foreman','excite','thinking','mend','allergen','pruning','coat','emerald',
-    'manic','multiple','square','funded','funnel','sailing','dream','mutation','strict','mystic','film','guide','strain','settle','emigrate','marching',
-    'optimal','medley','endanger','rage','figure','plague','aloof','there','reusable','refinery','suffer']
-
+words = ['Salad','Sandwich','Bread','Steak','Fish','shrimp','Rice','Spaghetti','pizza','hamburger','Eggs','Cheese','sausages','Milk','Candy',
+         'Cookie','Pie','Cake','Cupcake','noodles','chicken','beef','salt','sugar','pepper','mutton']
 def random_word():
     word = random.choice(words)
     return word.upper()
@@ -18,7 +15,7 @@ def play(word):
     print(word_c)
     print("\n")
     while not guessed and tries > 0:
-        guess = input("Guess the word: ").upper()
+        guess = input("Guess the Food Item: ").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess is guessed_letter:
                 print('Already guessed',guess)
