@@ -12,6 +12,7 @@ def play(word):
     incorrect_attempt = 0
     tries = 6
     print("Let's play the Hangman game.")
+    print("Guess the ",len(word)," letter food item.")
     print(display_hang(tries))
     print(word_c)
     print("\n")
@@ -22,13 +23,14 @@ def play(word):
                 print('Already guessed',guess)
             elif guess not in word:
                 incorrect_attempt +=1
+                tries -=1
+                guessed_letter.append(guess)
+                print("Incorrect guess ", guess)
                 if incorrect_attempt >=2 and incorrect_attempt % 2 == 0:
                     l = input("Do you want a hint(y/n) :").upper()
                     if l == 'Y':
                         hint = random.choice([letter for letter in word if letter not in guessed_letter ])
                         print(f"Hint : The word contains the letter '{hint}'.")
-                tries -=1
-                guessed_letter.append(guess)
             else:
                 print("good guess",guess)
                 guessed_letter.append(guess)

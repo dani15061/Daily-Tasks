@@ -5,4 +5,5 @@ d = {'fruits' :['strawberry','apple','mango','orange','banana','pineapple'], 'an
 l1 = random.choice(l)
 print(l1)
 if l1 in d:
-    print(d[l1][random.randint(0,len(d[l1]) -1)])
+    d1 = d[l1][random.randint(0,len(d[l1]) -1)]
+    print(d1)

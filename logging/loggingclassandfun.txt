@@ -1,0 +1,33 @@
+The most commonly used classes which are already defined in the logging module are given below:
+
+1. Logger class
+The Logger is the class whose objects will be used in the application code directly to call the functions.
+
+2. LogRecord
+The Logger class automatically create LogRecord objects which contain the information related to the event being logged, or in simple words the log message. It contains information like the name of the logger, the function, the line number, the message, the process id, etc.
+
+3. Handler
+The Handlers are mainly used to send the LogRecord to the required output destination, it can be console or a file
+
+The class Handler is the base for subclasses like StreamHandler, FileHandler, SMTPHandler, HTTPHandler, and more. These subclasses also send the logging outputs to corresponding destinations, like sys.stdout or a disk file.
+
+4. Formatter
+The Formatter is a class where you specify the format of the output by specifying a string format that mainly lists out the attributes the output should contain.
+
+Several Logger objects
+In Logging Module items with all caps are constant, the capitalize items indicate classes, and the items which start with lowercase letters are methods. Below we have a table consisting of several logger objects offered by the Logging module:
+
+Object	Description
+Logger.info(msg)	This function mainly helps to log a message with level INFO on this logger.
+Logger.warning(msg)	This function mainly helps to log a message with level WARNING on this logger.
+Logger.error(msg)	This function mainly helps to log a message with level ERROR on this logger.
+Logger.critical(msg)	This function mainly helps to log a message with level CRITICAL on this logger.
+Logger.setLevel(lvl)	This function is mainly used to set the threshold of the logger to lvl and that indicates all the messages below this level will be ignored.
+Logger.exception(msg)	This function mainly helps to log a message with level ERROR on this logger.
+Logger.log(lvl, msg)	This function will Logs a message with integer level lvl on this logger.
+Logger.filter(record)	This method is mainly used to apply the logger’s filter to the provided record and it will return True if the record is to be processed. otherwise, it will return False.
+Logger.addFilter(filt)	It is used to adds a specific filter filt to this logger.
+Logger.removeFilter(filt)	It is used to adds a specific filter filt from this logger.
+Logger.hasHandlers()	This is mainly used to check if the logger has any handler configured or not.
+Logger.addHandler(hdlr)	In order to add a specific handler hdlr to this logger.
+Logger.removeHandler(hdlr)	In order to remove a specific handler hdlr to this logger.
